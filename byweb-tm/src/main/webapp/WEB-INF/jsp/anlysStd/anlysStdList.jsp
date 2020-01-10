@@ -1,5 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +11,7 @@
 	body {
 		text-align: center;
 		color: #FFF;
-		width: 900px;
+		width: 1400px;
 	}
 
 	div#wrapper {
@@ -19,57 +21,28 @@
 		margin: 0 auto;
 	}
 	
-	header, footer, nav, section {
+	section {
 		border: 1px solid #999;
 		margin: 5px;
 		padding: 10px;
-	}
-	
-	nav, section {
 		float: left;
-		height: 200px;
-	}
-	
-	nav {
-		background-color: goldenrod;
-		width: 100px;
-	}
-	
-	section {
+		height: 550px;
 		background-color: green;	
-		width: 790px; 
-	}
-	
-	footer {
-		background-color: blue;
-		position: relatiev;
-		clear: both;
+		width: 1235px; 
 	}
 </style>
 </head>
 <body>
 <div id="wrapper">
-	<header>
-		<p>HEADER</p>
-	</header>
-	
-	<nav>
-		<p>NAV</p>
-		<ul>
-			<li><a href="">LINK</a></li>
-			<li><a href="">LINK</a></li>
-			<li><a href="">LINK</a></li>
-		</ul>
-	</nav>
-	
+<%@ include file="/WEB-INF/jsp/common/header.jsp" %>
+<%@ include file="/WEB-INF/jsp/common/nav.jsp" %>
 	<section>
 		<p>SECTION</p>
 		<article>
 			<p>ARTICLE</p>
 		</article>
 	</section>
-	
-	<footer>footer</footer>
+<%@ include file="/WEB-INF/jsp/common/footer.jsp" %>
 </div>
 </body>
 </html>
